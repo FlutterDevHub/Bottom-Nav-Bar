@@ -92,7 +92,10 @@ class CustomBottomNavigationBar extends StatelessWidget {
     );
   }
 }
+
+
 // Custom Paint Of Bottom Navigation Bar
+
 class BottombarPainter extends CustomPainter {
   final double screenWidth;
 
