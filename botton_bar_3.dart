@@ -32,21 +32,28 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.backgroundColor,
       body: pages[selectedIndex],
-      bottomNavigationBar: Container(
-        color: Colors.white,
-        height: 9.h,
-        padding: EdgeInsets.symmetric(horizontal: 4.w),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            buildNavItem(AppImages.home, 'Home', 0),
-            buildNavItem(AppImages.search, 'Search', 1),
-            buildNavItem(AppImages.heart, 'Saved', 2),
-            buildNavItem(AppImages.cart, 'Cart', 3),
-            buildNavItem(AppImages.account, 'Account', 4),
-          ],
-        ),
+      bottomNavigationBar: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Divider(height: 1, thickness: 1, color: AppColors.gray1),
+          Container(
+            color: AppColors.backgroundColor,
+            height: 9.h,
+            padding: EdgeInsets.symmetric(horizontal: 4.w),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                buildNavItem(AppImages.home, 'Home', 0),
+                buildNavItem(AppImages.search, 'Search', 1),
+                buildNavItem(AppImages.heart, 'Saved', 2),
+                buildNavItem(AppImages.cart, 'Cart', 3),
+                buildNavItem(AppImages.account, 'Account', 4),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
