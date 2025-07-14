@@ -14,8 +14,9 @@
 </table>
 <table align="center">
   <tr>
-    <th>Bottombar_4</th>
+      <th>Bottombar_4</th>
       <th>Bottombar_5</th>
+     <th>Bottombar_6</th>
      </tr>
     <tr>
 
